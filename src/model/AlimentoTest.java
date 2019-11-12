@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class AlimentoTest {
 
 	@Test
-	void Alimentotest() throws Exception {
+	void alimentoTest() throws Exception {
 		Alimento alimento = new Alimento("Cenoura", "kg");
 		assertEquals("Cenoura", alimento.getNome());
 		assertEquals("kg", alimento.getMedida());
