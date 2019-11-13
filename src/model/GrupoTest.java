@@ -10,23 +10,16 @@ class GrupoTest {
 
 	@Test
 	void grupoTest() throws Exception {
-		ArrayList<Alimento> alimentos = new ArrayList<Alimento>();
 		
-		String nome = "Legume";
-		String medida = "kg";
+		Grupo grupo = new Grupo("Legumes");
 		
-		String legume1 = "Cenoura";
-		String legume2 = "Beterraba";
-		String legume3 = "Rabanete";
+		grupo.cadastraAlimento("Cenoura", "g");
+		grupo.cadastraAlimento("Beterraba", "g");
+		grupo.cadastraAlimento("Rabanete", "g");
 		
-		alimentos.add(new Alimento(legume1,medida));
-		alimentos.add(new Alimento(legume2,medida));
-		alimentos.add(new Alimento(legume3,medida));
+		ArrayList<Alimento> alimentos = grupo.getAlimentos();
 		
-		Grupo grupo = new Grupo(nome, alimentos);
-		ArrayList<Alimento> grupoAlimentos = grupo.getAlimentos();
-		
-		assertEquals(grupo.getNome(),nome);
-		assertEquals(alimentos,grupoAlimentos);
+		assertEquals(grupo.getNome(), "Legumes");
+		assertEquals(alimentos.get(0).getNome(), "Cenoura");
 	}
 }

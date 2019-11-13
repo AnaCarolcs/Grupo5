@@ -1,0 +1,4 @@
+Abóbora;g
+Couve;g
+Couve-flor;g
+Alface;g
